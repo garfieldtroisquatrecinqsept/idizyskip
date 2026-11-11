@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Idizy Skip</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icons/icon.svg" alt="" width="22" height="22">
+      <h1>Idizy Skip</h1>
+    </div>
+    <label class="switch" title="Activer / désactiver">
+      <input type="checkbox" id="enabled">
+      <span class="track"><span class="thumb"></span></span>
+    </label>
+  </header>
+
+  <section id="current" hidden>
+    <h2>Dans cette vidéo</h2>
+    <p id="status" class="hint"></p>
+    <div id="streamers" class="chips"></div>
+  </section>
+
+  <section>
+    <h2>Streamers à skip</h2>
+    <form id="add">
+      <input id="name" type="text" placeholder="booshi_lol, kamet0…" autocomplete="off" spellcheck="false">
+      <button type="submit">Ajouter</button>
+    </form>
+    <ul id="list"></ul>
+    <p id="empty" class="hint">Aucun streamer pour l'instant.</p>
+  </section>
+
+  <footer>
+    <label class="check">
+      <input type="checkbox" id="idizyOnly">
+      <span>Seulement sur les vidéos d'Idizy</span>
+    </label>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

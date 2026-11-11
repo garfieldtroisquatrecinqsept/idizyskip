@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "Idizy Skip",
+  "version": "1.0.1",
+  "description": "Saute les clips des streamers de ton choix dans les best-of d'Idizy.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "idizy-skip@extension",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": [
+    "storage",
+    "*://www.youtube.com/*"
+  ],
+  "browser_action": {
+    "default_title": "Idizy Skip",
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
